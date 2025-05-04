@@ -1,17 +1,29 @@
-# min_dotenv
+<h1 align="center"> Minimal Dotenv </h1>
+<h3 align="center"> Experimental dotenv loader </h3>  
 
-Experimental dotenv loader
+</br>
 
-## Usage
+## ⚙️ Installation
 
-Given an arbitrary environmental file
+You can install `min_dotenv` using your preferred Python dependency manager:
+
+```bash
+pip install min-dotenv
 ```
-variable_name = "variable_content"
+
+Make sure you have Python 3.12 or higher installed.
+
+
+## 💧 Usage
+
+Given an environment file (e.g. `.env`) with key-value pairs
+```
 # Comments in your .env file are allowed
-another_var_name=123
+variable_name = "variable_content"
+another_var_name = 123
 ```
 
-**Hydrate** your `os` module with the new environmental variables
+You can **hydrate** these variables into Python’s `os.environ` using `min_dotenv`
 
 ```python
 import os
@@ -22,13 +34,13 @@ for name, val in os.environ.items()
     print(f"{name}: {val}")
 ```
 
-Outputs
-```
-... all your existing environmental variables
+Example output:
+```bash
 variable_name: variable_content
 another_var_name: 123
 ```
 
-## Installation
+## 🔖 License
 
-TBD
+Licensed under the [MIT License](LICENSE).  
+© 2025 Raúl Telo Sánchez
